@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      cutomText: 'custom text',
+      cutomText: 'MY TITLE',
       wasAccepted: false,
     };
   },
@@ -23,8 +23,9 @@ export default {
 <template>
   <div class="appDiv">
     <h1>Components examples</h1>
+    <input v-model="cutomText" type="text">
     <ButtonCounter
-      title-text="Some title" text="I was clicked x: "
+      :title-text="cutomText" text="I was clicked x: "
       @was-incremented="(arg) => console.log('wasIncremented', arg)"
     />
   </div>
